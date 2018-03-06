@@ -115,7 +115,7 @@ export class Angular5Csv {
     getHeaders(): void {
         if (this._options.headers.length > 0) {
             let row = "";
-            for (const column in this._options.headers) {
+            for (const column of this._options.headers) {
                 row += column + this._options.fieldSeparator;
             }
 
