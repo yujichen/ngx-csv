@@ -4,6 +4,7 @@
 
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e2133aa828054d7c865563b50100eb8b)](https://www.codacy.com/app/me_101/angular5-csv?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=alhazmy13/angular5-csv&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/alhazmy13/angular5-csv.svg?branch=master)](https://travis-ci.org/alhazmy13/angular5-csv)
 [![npm version](https://badge.fury.io/js/angular5-csv.svg)](https://badge.fury.io/js/angular5-csv)
 [![GitHub license](https://img.shields.io/github/license/alhazmy13/angular5-csv.svg)](https://github.com/alhazmy13/angular5-csv)
 ![Angular](https://img.shields.io/badge/Angular-%3E%3D5.0-red.svg)
