@@ -76,7 +76,8 @@ new Angular5Csv(data, 'My Report');
     showLabels: true, 
     showTitle: true,
     useBom: true,
-    noDownload: true
+    noDownload: true,
+    headers: ["First Name", "Last Name", "ID"]
   };
 
   Angular5Csv(data, filename, options);
