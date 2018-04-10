@@ -113,15 +113,14 @@ export class Angular5Csv {
      * Create Headers
      */
     getHeaders(): void {
-        if (this._options.headers.length > 0) {
-            let row = "";
-            for (const column of this._options.headers) {
-                row += column + this._options.fieldSeparator;
-            }
-
-            row = row.slice(0, -1);
-            this.csv += row + CsvConfigConsts.EOL;
-        }
+      if (this._options.headers.length > 0) {
+          const { headers } = this._options;
+          let row = headers.reduce((headerRow, header) => {
+              return headerRow + header + this._options.fieldSeparator;
+          }, '');
+          row = row.slice(0, -1);
+          this.csv += row + CsvConfigConsts.EOL;
+      }
     }
 
     /**
