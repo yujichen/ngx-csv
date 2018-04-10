@@ -68,7 +68,6 @@ new Angular5Csv(data, 'My Report');
 
 ## Options Example
 
-
 ```javascript
   var options = { 
     fieldSeparator: ',',
@@ -76,6 +75,7 @@ new Angular5Csv(data, 'My Report');
     decimalseparator: '.',
     showLabels: true, 
     showTitle: true,
+    title: 'Your title',
     useBom: true,
     noDownload: true,
     headers: ["First Name", "Last Name", "ID"]
