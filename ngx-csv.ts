@@ -42,7 +42,7 @@ export const ConfigDefaults: Options = {
     noDownload: CsvConfigConsts.DEFAULT_NO_DOWNLOAD
 };
 
-export class Angular5Csv {
+export class ngxCsv {
 
     public fileName: string;
     public labels: Array<String>;
@@ -144,11 +144,11 @@ export class Angular5Csv {
      */
     formartData(data: any) {
 
-        if (this._options.decimalseparator === 'locale' && Angular5Csv.isFloat(data)) {
+        if (this._options.decimalseparator === 'locale' && ngxCsv.isFloat(data)) {
             return data.toLocaleString();
         }
 
-        if (this._options.decimalseparator !== '.' && Angular5Csv.isFloat(data)) {
+        if (this._options.decimalseparator !== '.' && ngxCsv.isFloat(data)) {
             return data.toString().replace('.', this._options.decimalseparator);
         }
 

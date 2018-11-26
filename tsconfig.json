@@ -15,8 +15,8 @@
     "moduleResolution": "node"
   },
   "files": [
-    "Angular5-csv.ts",
-    "Angular5-csv.spec.ts",
+    "ngx-csv.ts",
+    "ngx-csv.spec.ts",
     "custom.d.ts"
   ],
   "exclude": [
