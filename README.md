@@ -4,10 +4,10 @@
 
 
 [![npm version](https://badge.fury.io/js/ngx-csv.svg)](https://badge.fury.io/js/ngx-csv)
-![Angular](https://img.shields.io/badge/Angular-%3E%3D5.0-red.svg)
+![Angular](https://img.shields.io/badge/Angular-%3E%3D2.0-red.svg)
 ![npm](https://img.shields.io/npm/dm/ngx-csv.svg)
 
-> Helper library for create CSV file in ngx
+> Helper library for create CSV file in Angular2+
 > 
 
 ## Installation 
@@ -88,3 +88,4 @@ new ngxCsv(data, 'My Report');
 
  * [sn123](https://github.com/sn123)
  * [arf1980](https://github.com/arf1980)
+ * [lhanscom](https://github.com/lhanscom)

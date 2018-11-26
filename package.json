@@ -1,6 +1,6 @@
 {
   "name": "ngx-csv",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "Helper library for create CSV file in Angular 2+",
   "repository": {
     "type": "git",
@@ -11,10 +11,12 @@
     "test-watch": "karma start",
     "test": "karma start --single-run",
     "run": "ts-node ./ngxCsv.ts",
-    "prepublishOnly": "tsc -p ./ --outDir dist/"
+    "prepublishOnly": "tsc -p ./ --outDir dist/"    
   },
   "keywords": [
     "ngx",
+    "angular7",
+    "angular-7",
     "export-to-csv",
     "export-to-excel",
     "csv",
