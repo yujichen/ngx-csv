@@ -167,6 +167,13 @@ export class ngxCsv {
     }
 
     /**
+     * Get CSV String
+     */
+    getCsv(){
+        return this.csv;
+    }
+
+    /**
      * Check if is Float
      * @param {any} input
      */
