@@ -1,6 +1,6 @@
 {
   "name": "ngx-csv",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Helper library for create CSV file in Angular 2+",
   "repository": {
     "type": "git",

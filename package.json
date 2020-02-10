@@ -11,7 +11,7 @@
     "test-watch": "karma start",
     "test": "karma start --single-run",
     "run": "ts-node ./ngxCsv.ts",
-    "prepublishOnly": "tsc -p ./ --outDir dist/"    
+    "prepublishOnly": "tsc -p ./ --outDir dist/"
   },
   "keywords": [
     "ngx",
