@@ -61,6 +61,8 @@ new ngxCsv(data, 'My Report');
 | **showTitle** | false      |   |
 | **useBom** | true      | If true, adds a BOM character at the start of the CSV |
 | **noDownload** | false      | If true, disables automatic download and returns only formatted CSV |
+| **removeEmptyValues** | false      | If true, null and undefined values will be be removed instead of being wrapped in "" |
+
 
 
 ## Options Example
