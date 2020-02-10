@@ -9,6 +9,7 @@ export interface Options {
     useBom: boolean;
     headers: string[];
     noDownload: boolean;
+    removeEmptyValues: boolean;
 }
 
 export class CsvConfigConsts {
@@ -26,6 +27,7 @@ export class CsvConfigConsts {
     public static DEFAULT_USE_BOM = true;
     public static DEFAULT_HEADER: any[] = [];
     public static DEFAULT_NO_DOWNLOAD = false;
+    public static DEFAULT_REMOVE_EMPTY_VALUES = false;
 
 }
 
@@ -39,7 +41,8 @@ export const ConfigDefaults: Options = {
     title: CsvConfigConsts.DEFAULT_TITLE,
     useBom: CsvConfigConsts.DEFAULT_USE_BOM,
     headers: CsvConfigConsts.DEFAULT_HEADER,
-    noDownload: CsvConfigConsts.DEFAULT_NO_DOWNLOAD
+    noDownload: CsvConfigConsts.DEFAULT_NO_DOWNLOAD,
+    removeEmptyValues: CsvConfigConsts.DEFAULT_REMOVE_EMPTY_VALUES
 };
 
 export class ngxCsv {
@@ -133,7 +136,7 @@ export class ngxCsv {
                 row += this.formartData(this.data[i][index]) + this._options.fieldSeparator;
             }
 
-            row = row.slice(0, -1);
+            row = row.slice(0, -1);            
             this.csv += row + CsvConfigConsts.EOL;
         }
     }
@@ -143,7 +146,9 @@ export class ngxCsv {
      * @param {any} data
      */
     formartData(data: any) {
-
+        if (this._options.removeEmptyValues && !data) {
+            return "";
+        }
         if (this._options.decimalseparator === 'locale' && ngxCsv.isFloat(data)) {
             return data.toLocaleString();
         }
