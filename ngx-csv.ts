@@ -10,6 +10,7 @@ export interface Options {
     headers: string[];
     noDownload: boolean;
     removeEmptyValues: boolean;
+    eol: string;
 }
 
 export class CsvConfigConsts {
@@ -42,7 +43,8 @@ export const ConfigDefaults: Options = {
     useBom: CsvConfigConsts.DEFAULT_USE_BOM,
     headers: CsvConfigConsts.DEFAULT_HEADER,
     noDownload: CsvConfigConsts.DEFAULT_NO_DOWNLOAD,
-    removeEmptyValues: CsvConfigConsts.DEFAULT_REMOVE_EMPTY_VALUES
+    removeEmptyValues: CsvConfigConsts.DEFAULT_REMOVE_EMPTY_VALUES,
+    eol: CsvConfigConsts.EOL
 };
 
 export class ngxCsv {
@@ -77,7 +79,7 @@ export class ngxCsv {
         }
 
         if (this._options.showTitle) {
-            this.csv += this._options.title + '\r\n\n';
+            this.csv += this._options.title + this._options.eol  +'\n';
         }
 
         this.getHeaders();
@@ -122,7 +124,7 @@ export class ngxCsv {
               return headerRow + header + this._options.fieldSeparator;
           }, '');
           row = row.slice(0, -1);
-          this.csv += row + CsvConfigConsts.EOL;
+          this.csv += row + this._options.eol;
       }
     }
 
@@ -137,7 +139,7 @@ export class ngxCsv {
             }
 
             row = row.slice(0, -1);            
-            this.csv += row + CsvConfigConsts.EOL;
+            this.csv += row + this._options.eol;
         }
     }
 
@@ -150,7 +152,7 @@ export class ngxCsv {
             return "";
         }
         if (this._options.decimalseparator === 'locale' && ngxCsv.isFloat(data)) {
-            return data.toLocaleString();
+            return parseFloat(data).toLocaleString();
         }
 
         if (this._options.decimalseparator !== '.' && ngxCsv.isFloat(data)) {
@@ -183,7 +185,8 @@ export class ngxCsv {
      * @param {any} input
      */
     static isFloat(input: any) {
-        return +input === input && (!isFinite(input) || Boolean(input % 1));
+        const regex = /^([+|-]?\d+.\d+\b)/;
+        return regex.exec(input) !== null;
     }
 }
 
