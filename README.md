@@ -62,7 +62,8 @@ new ngxCsv(data, 'My Report');
 | **useBom** | true      | If true, adds a BOM character at the start of the CSV |
 | **noDownload** | false      | If true, disables automatic download and returns only formatted CSV |
 | **removeEmptyValues** | false      | If true, null and undefined values will be be removed instead of being wrapped in "" |
-
+| **eol** | \r\n      | Defines the End Of Line character [Escape secuence](https://en.wikipedia.org/wiki/Newline#Representation) |
+ 
 
 
 ## Options Example
@@ -77,7 +78,8 @@ new ngxCsv(data, 'My Report');
     title: 'Your title',
     useBom: true,
     noDownload: true,
-    headers: ["First Name", "Last Name", "ID"]
+    headers: ["First Name", "Last Name", "ID"],
+    eol: '\n'
   };
 
   ngxCsv(data, filename, options);
