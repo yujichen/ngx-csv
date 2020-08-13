@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "noImplicitAny": true,
+    "outDir": "dist",
     "module": "commonjs",
     "target": "ES5",
     "emitDecoratorMetadata": true,

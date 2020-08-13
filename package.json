@@ -41,7 +41,7 @@
     "url": "https://github.com/lhanscom/ngx-csv/issues"
   },
   "main": "./dist/ngx-csv.js",
-  "typings": "/dist/ngx-csv.d.ts",
+  "typings": "./dist/ngx-csv.d.ts",
   "homepage": "https://github.com/lhanscom/ngx-csv/#readme",
   "devDependencies": {
     "@angular/common": "^7.1.0",
